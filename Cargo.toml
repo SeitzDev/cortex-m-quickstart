@@ -1,14 +1,15 @@
 [package]
-authors = ["{{authors}}"]
+authors = ["SeitzDev"]
 edition = "2018"
 readme = "README.md"
-name = "{{project-name}}"
+name = "nucleo-f103-quickstart"
 version = "0.1.0"
+description = "A template for building applications for ARM Cortex-M microcontrollers, specifically the NUCLEO-F103(RB)"
 
 [dependencies]
-cortex-m = "0.6.0"
-cortex-m-rt = "0.6.10"
-cortex-m-semihosting = "0.3.3"
+cortex-m = "0.6.2"
+cortex-m-rt = "0.6.12"
+cortex-m-semihosting = "0.3.5"
 panic-halt = "0.2.0"
 
 # Uncomment for the panic example.
@@ -26,7 +27,7 @@ panic-halt = "0.2.0"
 
 # this lets you use `cargo fix`!
 [[bin]]
-name = "{{project-name}}"
+name = "nucleo-f103-quickstart"
 test = false
 bench = false
 
