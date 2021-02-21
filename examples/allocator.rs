@@ -9,13 +9,12 @@
 //!
 //! ---
 
-#![feature(alloc)]
 #![feature(alloc_error_handler)]
 #![no_main]
 #![no_std]
 
 extern crate alloc;
-extern crate panic_halt;
+use panic_halt as _;
 
 use self::alloc::vec;
 use core::alloc::Layout;
@@ -23,7 +22,7 @@ use core::alloc::Layout;
 use alloc_cortex_m::CortexMHeap;
 use cortex_m::asm;
 use cortex_m_rt::entry;
-use cortex_m_semihosting::hprintln;
+use cortex_m_semihosting::{hprintln, debug};
 
 // this is the allocator the application will use
 #[global_allocator]
